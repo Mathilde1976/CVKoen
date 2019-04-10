@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<! Hallo en leuk dat u naar mijn code kijkt! U zult waarschijnlijk zien dat ik css, javascript en HTML in één bestand heb zitten. Dit heb ik gedaan om alles in één bestand te houden om een zip te voorkomen. !>
+	<heading>
+		<title>Koen Hankel</title>
+		<style>
+			.top{
+				background-color: aliceblue;
+				border: 2px solid black;
+				border-radius: 5px;
+				max-width: 100%;					
+				min-height: 150px;
+				overflow: auto;
+				position: relative;
+			}
+			.persoonlijkeInformatietop{
+				margin-left: 10%;
+
+			}
+			.topdiv{
+				float: left;
+				text-align: center;
+				border: 2px solid black;
+				background-color: darkorange;
+				width: 20%;
+				cursor: pointer;
+			}
+			.KoenHankeltop{
+				text-align: center;
+				cursor: pointer;
+			}
+			.tekst{
+				background-color: aliceblue;
+				margin-top: 15px;
+				padding: 12px;
+				border: 2px solid black;
+				border-radius: 5px;
+				max-width: 100%;					
+				min-height: 520px;
+				overflow: auto;
+				position: relative;
+			}
+			.inleiding{
+				display: block;
+			}
+			.persoonlijkeInformatie{
+				display: none;
+			}
+			.opleidingen{
+				display: none;
+			}
+			.werkervaring{
+				display: none;
+			}
+			.hobbysEnVaardigheden{
+				display: none;
+
+			}
+			.divs{
+				border: 2px solid black;
+				border-radius: 5px;
+				margin: 5px;
+				max-width: 300px;
+				float: left;
+				padding: 2px;
+			}
+			h2{
+				cursor: pointer;
+			}
+		</style>
+		<script>
+			var inleidingvar = true;
+			var persoonlijkeInformatievar = false;
+			var opleidingenvar = false;
+			var werkervaringvar = false;
+			var hobbysEnVaardighedenvar = false;
+			function inleiding(){
+				if(inleidingvar){
+				document.getElementsByClassName('inleiding')[0].style.display = 'none';
+					inleidingvar = false;
+				}
+				else{
+					document.getElementsByClassName('inleiding')[0].style.display = 'block';
+					inleidingvar = true;
+				}
+			}
+			function persoonlijkeInformatie(){
+				if(persoonlijkeInformatievar){
+					document.getElementsByClassName('persoonlijkeInformatie')[0].style.display = 'none';
+					persoonlijkeInformatievar = false;
+				}
+				else{
+					document.getElementsByClassName('persoonlijkeInformatie')[0].style.display = 'block';
+					persoonlijkeInformatievar = true;
+				}
+			}
+			function opleidingen(){
+				if(opleidingenvar){
+					document.getElementsByClassName('opleidingen')[0].style.display = 'none';
+					opleidingenvar = false;
+				}
+				else{
+					document.getElementsByClassName('opleidingen')[0].style.display = 'block';
+					opleidingenvar = true;
+				}
+			}
+			function werkervaring(){
+				if(werkervaringvar){
+				document.getElementsByClassName('werkervaring')[0].style.display = 'none';
+					werkervaringvar = false;
+				}
+				else{
+					document.getElementsByClassName('werkervaring')[0].style.display = 'block';
+					werkervaringvar = true;
+				}
+				
+			}
+			function hobbysEnVaardigheden(){
+				if(hobbysEnVaardighedenvar){document.getElementsByClassName('hobbysEnVaardigheden')[0].style.display = 'none';
+				hobbysEnVaardighedenvar = false;
+				}
+				else{
+					document.getElementsByClassName('hobbysEnVaardigheden')[0].style.display = 'block';
+					hobbysEnVaardighedenvar = true;
+				}
+				
+			}
+		</script>
+	</heading>
+	<body>
+		<div class="top">
+			<h1 class=KoenHankeltop onclick="inleiding()">Koens digitale CV en Portfolio</h1>
+			<p class="persoonlijkeInformatietop topdiv" onclick="persoonlijkeInformatie()"> Persoonlijke Informatie </p>
+			<p class="opleidingentop topdiv" onclick="opleidingen()"> Opleidingen </p>
+			<p class="werkervaringtop topdiv" onclick="werkervaring()"> Werkervaring </p>
+			<p class="hobbyvaardighedentop topdiv" onclick="hobbysEnVaardigheden()"> Hobby's & Vaardigheden </p>
+			
+		</div>
+		<div class="tekst">
+			<div class="inleiding divs">
+				<h2 onclick="inleiding()">Welkom op mijn website!</h2><br>
+				Op deze website kunt u mijn cv zien samen met het werk dat ik heb gemaakt.<br>
+				Als u iets wil weten kunt u op éen van de 4 kopjes boven drukken om de tekst toe te voegen.<br>
+				Wordt de tekst u te veel? Dan drukt u opnieuw op een kopje om de tekst weg te laten!<br>
+			</div>
+			<div class="persoonlijkeInformatie divs">
+				<h2 onclick="persoonlijkeInformatie()">Persoonlijke Informatie</h2><br>
+				<b>Voornaam: </b>Koen<br>
+				<b>Achternaam: </b>Hankel<br>
+				<b>Geboorte: </b>3 Juni 2002<br>
+				<b>GeboortePlaats:</b> Delft <br>
+				<b>Telefoonnummer: </b>+31 6 39677653 <br>
+				<b>Adres: </b>Horstweg 1, Laren Gelderland<br>
+				<b>Nationaliteit: </b>Nederland<br>
+				<b>E-Mailadres: </b>koen_hankel@hotmail.com<br>
+			</div>
+			<div class="opleidingen divs">
+				<h2 onclick="opleidingen()"><b>Opleidingen</b></h2><br>
+				<b>Gamedeveloper</b><br>
+				27 augustus tot heden <br>
+				ROC Aventus Appeldoorn <br>
+				MBO Niveau 4 <br>
+				<br>
+				<b>MAVO</b><br>
+				2 September 2014 - 5 Juli 2018 <br>
+				Staring College Lochem <br>
+				
+				
+			</div>
+			<div class="werkervaring divs">
+				<h2 onclick="werkervaring()"><b>Werkervaring</b></h2>
+				<b>Krantenwijk</b><br>
+				All-Inn Verspreidingen.<br>
+				Vanaf 27-2-2017 t/m heden.<br>
+			</div>
+			<div class="hobbysEnVaardigheden divs">
+				<h2 onclick="hobbysEnVaardigheden()"><b>Hobby's & Vaardigheden</b></h2><br>
+				<b>Hobby's</b><br>
+				Programeren<br>
+				Gamen<br><br>
+				<b>Werk om trots op te zijn:</b><br>
+				Webshop opdracht.<br>
+				Boter Kaas en Eieren.<br>
+				MijnEersteGame.exe(soon)<br>
+				Galgje(soon)<br>
+			</div>
+		</div>
+	</body>
+</html>
